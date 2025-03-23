@@ -31,7 +31,7 @@ def setup_driver():
     options = webdriver.ChromeOptions()
     
     # Run browser visibly to mimic a real user
-    # options.add_argument("--headless")  # Comment this line
+    # options.add_argument("--headless")
 
     # Mimic human behavior
     options.add_argument("start-maximized")
@@ -43,7 +43,7 @@ def setup_driver():
 import random
 
 def random_delay():
-    time.sleep(random.uniform(2, 5))  # Random delay between 2-5 seconds
+    time.sleep(random.uniform(2, 5))
 
 def login(driver):
     driver.get(LOGIN_URL)
