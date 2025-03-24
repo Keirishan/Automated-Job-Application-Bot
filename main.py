@@ -9,11 +9,9 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-# USERNAME = os.getenv("USERNAME")
-# PASSWORD = os.getenv("PASSWORD")
 JOBROLE = input("Enter the Job Role: ")
-USERNAME = "freakinggeek1315@gmail.com"
-PASSWORD = "Keiri@1511"
+USERNAME = os.getenv("LINKEDIN_EMAIL")
+PASSWORD = os.getenv("PASSWORD")
 LOGIN_URL = "https://www.linkedin.com/login"
 JOB_SEARCH_URL = f"https://www.linkedin.com/jobs/search/?keywords={JOBROLE}"
 
