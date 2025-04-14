@@ -18,12 +18,14 @@ load_dotenv()
 # JOBROLE = input("Enter the Job Role: ")
 # JOBROLE = "Data Engineer"
 JOBROLE = os.getenv("JOBROLE")
+DATE_POSTED_FILTER = os.getenv("DATE_POSTED")
+DATE_POSTED = os.getenv("DATE_POSTED", "r86400")
 USERNAME = os.getenv("LINKEDIN_EMAIL")
 PASSWORD = os.getenv("PASSWORD")
 DB_USERNAME = os.getenv("DB_USERNAME")
 DB_PASSWORD = os.getenv("DB_PASSWORD")
 LOGIN_URL = "https://www.linkedin.com/login"
-JOB_SEARCH_URL = f"https://www.linkedin.com/jobs/search/?keywords={JOBROLE}"
+JOB_SEARCH_URL = f"https://www.linkedin.com/jobs/search/?keywords={JOBROLE}&f_TPR={DATE_POSTED_FILTER}"
 
 def setup_driver():
     options = webdriver.ChromeOptions()

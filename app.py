@@ -18,10 +18,21 @@ st.markdown(
 st.title("LinkedIn Job Scraper")
 # page = st.sidebar.selectbox("Go to", ["-- Select Page --", "Home", "Jobs", "About"])
 job_role = st.text_input("Enter Job Role:", placeholder="Enter the job role you're interested in")
+date_posted = st.selectbox("Date Posted", ["-- Date Posted --", "Past 24 hours", "Past Week", "Past Month"])
 
 if st.button("Scrape Jobs"):
     if job_role:
         os.environ["JOBROLE"] = job_role
+        if date_posted == "Past 24 hours":
+            os.environ["DATE_POSTED"] = "r86400"
+            
+        elif date_posted == "Past Week":
+            os.environ["DATE_POSTED"] = "r604800"
+            
+        elif date_posted == "Past Month":
+            os.environ["DATE_POSTED"] = "r2592000"
+        else:
+            os.environ["DATE_POSTED"] = "r86400"
 
         # Run the scraping script as a subprocess
         with st.spinner("Scraping jobs... Please wait."):
