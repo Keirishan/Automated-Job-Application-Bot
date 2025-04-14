@@ -38,6 +38,7 @@ A Python-based web scraper that allows users to search for LinkedIn job listings
 │   ├── requirements.txt
 │   ├── .gitignore
 │   ├── README.md
+│   ├── .env
 
 ```
 
