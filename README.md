@@ -49,7 +49,7 @@ A Python-based web scraper that allows users to search for LinkedIn job listings
 1. **Clone the Repository**
 ```bash
 git clone https://github.com/Keirishan/Automated-Job-Application-Bot.git
-cd linkedin-job-scraper
+cd Automated-Job-Application-Bot
 ```
 2. Install Dependencies
 ```
